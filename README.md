@@ -118,7 +118,7 @@ e1.onSelect(value => {
 
 ### emojiList
 
-- Type: Array<object>
+- Type: Array\<object>
 - Default: []
 - Necessary: Yes
 - Description: Emoji list. native, image link or any text.

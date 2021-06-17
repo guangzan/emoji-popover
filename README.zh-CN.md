@@ -4,7 +4,7 @@
 
 Emoji Popover 是原生 JavaScript 构建的表情选择弹窗.
 
-## Features
+## 特性
 
 - 📦 通过 brotli 压缩只有 0.61kb
 - 💻 原生 JS, 没有任何依赖, 可用于任何框架
@@ -13,11 +13,11 @@ Emoji Popover 是原生 JavaScript 构建的表情选择弹窗.
 - 🎨 使用 CSS 变量定义任何样式
 - 🧩 使用插件扩展功能
 
-## Browser support
+## 浏览器支持
 
 所有支持最新 JavaScript 功能的现代浏览器都支持 emojipopover。Internet Explorer 11 +。
 
-## Installation & Usage
+## 安装 & 使用
 
 如果你使用的是 yarn 或 npm 之类的包管理器，则可以直接从 npm 安装 **emoji-popover**：
 
@@ -92,37 +92,37 @@ e1.onSelect(value => {
 })
 ```
 
-## Options
+## 选项
 
 ### button
 
 - 类型: string
 - 默认值: '.e-btn'
 - 是否必需: 不是, 如果你已经给 HTML 添加了 class `e-btn`。
-- 描述: 按钮选择器，单击此按钮弹出面板。
+- 描述：按钮选择器，单击此按钮弹出面板。
 
 ### container
 
 - 类型: string
 - 默认值: 'body'
 - 是否必需: 不是
-- 描述: 容器选择器，放置 Emoji Popover 的容器。
+- 描述：容器选择器，放置 Emoji Popover 的容器。
 
 ### targetElement
 
 - 类型: string
 - 默认值: '.e-input'
 - 是否必需: 不是, 如果你已经给 HTML 添加了 class `e-input`。
-- 描述: 输入框，表情符号弹出框将出现在它下面。
+- 描述：输入框，表情符号弹出框将出现在它下面。
 
 ### emojiList
 
-- 类型: Array<object>
+- 类型: Array\<object>
 - 默认值: []
 - 是否必需: 是的
-- 描述: 表情列表。系统表情、图像链接或任何文本。
+- 描述：表情列表。系统表情、图像链接或任何文本。
 
-## Methods
+## 方法
 
 ### onSelect
 
@@ -132,7 +132,7 @@ e1.onSelect(value => {
 
 关闭或打开 Emoji Popover。它接收一个 Boolean 类型的参数，如果参数为 true，Emoji Popover 将被打开。反之，则关闭。
 
-## Style
+## 样式
 
 你可以重写这些 CSS 变量来定制样式。
 
