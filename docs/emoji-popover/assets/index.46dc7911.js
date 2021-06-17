@@ -1,1 +1,0 @@
-import{E as e}from"./vendor.e99f8791.js";const t=new e({button:".e-btn",container:"body",targetElement:".e-input",emojiList:[{value:"🤣",label:"笑哭"}]});let n=document.querySelector(".e-input");t.onSelect((e=>{n.value+=e}));

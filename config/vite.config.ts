@@ -7,6 +7,7 @@ export default defineConfig({
     port: 8080
   },
   build: {
+    emptyOutDir: true,
     lib: {
       formats: ['es', 'umd', 'iife'],
       entry: resolve(__dirname, '../src/main.ts'),

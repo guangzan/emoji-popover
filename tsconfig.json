@@ -1,1 +1,7 @@
-{}
+{
+  "compilerOptions": {
+    "module": "esnext",
+    "moduleResolution": "node",
+    "types": ["vite/client"]
+  }
+}
