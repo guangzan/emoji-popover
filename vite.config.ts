@@ -1,5 +1,5 @@
 import { defineConfig } from 'vite'
-const path = require('path')
+import { resolve } from 'path'
 
 export default defineConfig({
   server: {
@@ -9,7 +9,7 @@ export default defineConfig({
   build: {
     lib: {
       formats: ['es', 'umd', 'iife'],
-      entry: path.resolve(__dirname, './src/main.ts'),
+      entry: resolve(__dirname, './src/main.ts'),
       name: 'EmojiPopover'
     }
   }

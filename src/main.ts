@@ -116,7 +116,7 @@ class EmojiPopover {
    * 打开或关闭表情面板
    * @param isShow {Boolean}
    */
-  private toggle(isShow) {
+  public toggle(isShow) {
     const emojiWrap: HTMLElement = document.querySelector('.emoji-wrap')
     emojiWrap.style.display = isShow ? 'block' : 'none'
   }
