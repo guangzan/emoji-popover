@@ -1,0 +1,39 @@
+{
+  "name": "emoji-popover",
+  "description": "Vanilla JavaScript emoji popover.",
+  "version": "1.0.2",
+  "license": "MIT",
+  "author": "guangzan <guangzan1999@outlook.com> (https://www.cnblogs.com/guangzan)",
+  "homepage": "https://guangzan.github.io/emoji-popover/",
+  "bugs": "https://github.com/guangzan/emoji-popover/issues",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/emoji-popover.umd.js",
+  "module": "./dist/emoji-popover.es.js",
+  "types": "./dist/emoji-popover.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/emoji-popover.es.js",
+      "require": "./dist/emoji-popover.umd.js"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/guangzan/emoji-popover.git"
+  },
+  "keywords": [
+    "emoji",
+    "emoji picker",
+    "emoji popover",
+    "emoji selector"
+  ],
+  "devDependencies": {
+    "sass": "^1.34.1",
+    "vite": "^2.3.4"
+  }
+}
