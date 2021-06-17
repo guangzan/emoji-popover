@@ -1,25 +1,25 @@
 ## Emoji Popover
 
-**English** | [中文](./README.zh-CN.md)
+**[English](./README.md)** | 中文
 
-Vanilla JavaScript Emoji Popover.
+Emoji Popover 是原生 JavaScript 构建的表情选择弹窗.
 
 ## Features
 
-- 📦 brotli: 0.61kb
-- 💻 Vanilla JS, no dependency, use with any framework
-- 🙅‍ No Emoji is integrated
-- ⚙️ Add your own custom emojis, native, image or any text
-- 🎨 Use CSS variables to define any style
-- 🧩 Extend functionality with plugins
+- 📦 通过 brotli 压缩只有 0.61kb
+- 💻 原生 JS, 没有任何依赖, 可用于任何框架
+- 🙅‍ 没有集成任何表情
+- ⚙️ 添加你的自定义表情，可以是系统表情、图片链接、或任何文本
+- 🎨 使用 CSS 变量定义任何样式
+- 🧩 使用插件扩展功能
 
 ## Browser support
 
-Emoji Popover is supported on all modern browsers supporting the latest JavaScript features. Internet Explorer 11 +.
+所有支持最新 JavaScript 功能的现代浏览器都支持 emojipopover。Internet Explorer 11 +。
 
 ## Installation & Usage
 
-If you are using a package manager like `yarn` or `npm`, you can install **emoji-popover** directly from the npm:
+如果你使用的是 yarn 或 npm 之类的包管理器，则可以直接从 npm 安装 **emoji-popover**：
 
 ```
 npm i emoji-popover
@@ -59,8 +59,7 @@ e1.onSelect(value => {
 })
 ```
 
-If you don't use NPM or Yarn, click [here](https://github.com/guangzan/emoji-popover/tree/master/dist)
-to download `emoji-popover.iife.js` and `style.css`.
+如果你没有使用 NPM 或者 Yarn, 点击 [这里](https://github.com/guangzan/emoji-popover/tree/master/dist) 下载 `emoji-popover.iife.js` 和 `style.css`.
 
 ```HTML
 <link rel="stylesheet" href="xxx/style.css" />
@@ -97,45 +96,45 @@ e1.onSelect(value => {
 
 ### button
 
-- Type: string
-- Default: '.e-btn'
-- Necessary: No, if you have class `e-btn` in HTML.
-- Description: Button selector, click this button to pop up the panel.
+- 类型: string
+- 默认值: '.e-btn'
+- 是否必需: 不是, 如果你已经给 HTML 添加了 class `e-btn`。
+- 描述: 按钮选择器，单击此按钮弹出面板。
 
 ### container
 
-- Type: string
-- Default: 'body'
-- Necessary: no
-- Description: Container selector, the container where Emoji Popover is placed.
+- 类型: string
+- 默认值: 'body'
+- 是否必需: 不是
+- 描述: 容器选择器，放置 Emoji Popover 的容器。
 
 ### targetElement
 
-- Type: string
-- Default: '.e-input'
-- Necessary: No, if you have class `e-input` in HTML.
-- Description: Input box, Emoji Popover will appear below it.
+- 类型: string
+- 默认值: '.e-input'
+- 是否必需: 不是, 如果你已经给 HTML 添加了 class `e-input`。
+- 描述: 输入框，表情符号弹出框将出现在它下面。
 
 ### emojiList
 
-- Type: Array<object>
-- Default: []
-- Necessary: Yes
-- Description: Emoji list. native, image link or any text.
+- 类型: Array<object>
+- 默认值: []
+- 是否必需: 是的
+- 描述: 表情列表。系统表情、图像链接或任何文本。
 
 ## Methods
 
 ### onSelect
 
-Trigger callback function when selecting an emoji.
+选择表情符号时触发传入的回调函数。
 
 ### toggle
 
-Turn off or on Emoji Popover. It receives a parameter of type Boolean, if the parameter is true, Emoji Popover will be turned on, if false, Emoji Popover will be turned off.
+关闭或打开 Emoji Popover。它接收一个 Boolean 类型的参数，如果参数为 true，Emoji Popover 将被打开。反之，则关闭。
 
 ## Style
 
-You can override these CSS variables to customize the style.
+你可以重写这些 CSS 变量来定制样式。
 
 ```CSS
 :root {
