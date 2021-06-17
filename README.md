@@ -12,7 +12,7 @@ Vanilla JavaScript emoji popover.
 
 ## Installation & Usage
 
-If you are using a package manager like `yarn` or `npm`, you can install **emoji-popover** directly from the npm registry:
+If you are using a package manager like `yarn` or `npm`, you can install **emoji-popover** directly from the npm:
 
 ```
 npm i emoji-popover
@@ -52,7 +52,7 @@ e1.onSelect(value => {
 })
 ```
 
-If you don't use NPM or Yarn, click [here](https://github.com/guangzan/emoji-popover/dist)
+If you don't use NPM or Yarn, click [here](https://github.com/guangzan/emoji-popover/tree/master/dist)
 to download `emoji-popover.iife.js` and `style.css`.
 
 ```HTML
