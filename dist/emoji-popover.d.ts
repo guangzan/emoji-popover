@@ -25,7 +25,7 @@ export declare class EmojiButton {
   /*
    * Listen to Choose an emoji.
    */
-  public onSelect(callback: (value: string) => {}): void
+  public onSelect(callback: (value: string) => void): void
 }
 
 export default EmojiButton
