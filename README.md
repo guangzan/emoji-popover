@@ -6,7 +6,7 @@ Vanilla JavaScript emoji popover.
 
 - 💻 Vanilla JS, no dependency, use with any framework
 - 🙅‍ No Emoji is integrated
-- ⚙️ Add your own custom emojis, native, image or any text.
+- ⚙️ Add your own custom emojis, native, image or any text
 - 🎨 Use CSS variables to define any style
 - 🧩 Extend functionality with plugins
 
@@ -52,7 +52,7 @@ e1.onSelect(value => {
 })
 ```
 
-If you don't use NPM or Yarn, click [here](https://github.com/guangzan/emoji-popover)
+If you don't use NPM or Yarn, click [here](https://github.com/guangzan/emoji-popover/dist)
 to download `emoji-popover.iife.js` and `style.css`.
 
 ```HTML
