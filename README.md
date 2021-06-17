@@ -1,6 +1,6 @@
 ## introduction
 
-Vanilla JavaScript emoji popover.
+Vanilla JavaScript Emoji Popover.
 
 ## Features
 
@@ -9,6 +9,10 @@ Vanilla JavaScript emoji popover.
 - ⚙️ Add your own custom emojis, native, image or any text
 - 🎨 Use CSS variables to define any style
 - 🧩 Extend functionality with plugins
+
+## Browser support
+
+Emoji Popover is supported on all modern browsers supporting the latest JavaScript features. Internet Explorer is not supported.
 
 ## Installation & Usage
 
@@ -86,7 +90,7 @@ e1.onSelect(value => {
 })
 ```
 
-## API
+## Options
 
 ### button
 
@@ -100,14 +104,14 @@ e1.onSelect(value => {
 - Type: string
 - Default: 'body'
 - Necessary: no
-- Description: Container selector, the container where emoji popover is placed.
+- Description: Container selector, the container where Emoji Popover is placed.
 
 ### targetElement
 
 - Type: string
 - Default: '.e-input'
 - Necessary: No, if you have class `e-input` in HTML.
-- Description: Input box, emoji popover will appear below it.
+- Description: Input box, Emoji Popover will appear below it.
 
 ### emojiList
 
@@ -116,6 +120,12 @@ e1.onSelect(value => {
 - Necessary: Yes
 - Description: Emoji list, native, image link or any text.
 
-## Browser support
+## Methods
 
-Emoji Popover is supported on all modern browsers supporting the latest JavaScript features. Internet Explorer is not supported.
+### onSelect
+
+Trigger callback function when selecting an emoji.
+
+### toggle
+
+Turn off or on Emoji Popover. It receives a parameter of type Boolean, if the parameter is true, Emoji Popover will be turned on, if false, Emoji Popover will be turned off.
