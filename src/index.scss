@@ -54,7 +54,7 @@
   justify-content: center;
   align-items: center;
   padding: 6px 6px;
-  color: var(--color-emoji-text);
+  color: var(--e-color-emoji-text);
   cursor: pointer;
   box-sizing: border-box;
   border: 1px solid transparent;
@@ -63,7 +63,7 @@
   &:hover {
     background: var(--e-bg-emoji-hover);
     border-color: var(--e-color-border-emoji-hover);
-    & > .emoji {
+    & > .emoji-text {
       transform: scale(1.2);
       transition: transform 0.15s cubic-bezier(0.2, 0, 0.13, 2);
     }
@@ -78,8 +78,8 @@
 }
 
 .emoji-img {
-  width: 20px;
-  height: 20px;
+  width: var(--e-width-emoji-img);
+  height: var(--e-height-emoji-img);
 }
 
 .emoji-mask {

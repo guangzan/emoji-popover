@@ -3,28 +3,34 @@ import { IEmojiItem, IOptions } from './utils/types'
 import './index.scss'
 
 class EmojiPopover {
-  options: IOptions
+  private options: IOptions
+  private wrapClassName: string
+  private wrapCount: number
+  private wrapCountClassName: string
 
   constructor(private opts: IOptions) {
     const defaultOptions: IOptions = {
       container: 'body',
       button: '.e-btn',
       targetElement: '.e-input',
-      emojiList: []
+      emojiList: [],
+      wrapClassName: '',
+      wrapAnimationClassName: 'anim-scale-in'
     }
 
     this.options = Object.assign({}, defaultOptions, opts)
-    this._init()
+    this.wrapClassName = 'emoji-wrap'
+    this.wrapCount = document.querySelectorAll('.emoji-wrap').length + 1
+    this.wrapCountClassName = `emoji-wrap-${this.wrapCount}`
 
-    const _mask = document.querySelector<HTMLElement>('.emoji-mask')
-    _mask.addEventListener('click', () => this.toggle(false))
-
-    const { button } = this.options
-    const _button = document.querySelector<HTMLElement>(button)
-    _button.addEventListener('click', () => this.toggle(true))
+    this.init()
+    this.createButtonListener()
   }
 
-  private _init() {
+  /**
+   * 初始化
+   */
+  private init(): void {
     const { emojiList, container, button, targetElement } = this.options
 
     const _emojiContainer = this.createEmojiContainer()
@@ -43,23 +49,37 @@ class EmojiPopover {
   }
 
   /**
-   * 创建表情面板容器
-   * @returns {JQuery Object}
+   * 创建按钮事件
    */
-  private createEmojiContainer() {
-    const container: HTMLElement = document.createElement('div')
-    container.classList.add('emoji-wrap')
-    container.classList.add('anim-scale-in')
+  private createButtonListener(): void {
+    const { button } = this.options
+    const _button = document.querySelector<HTMLElement>(button)
+    _button.addEventListener('click', () => this.toggle(true))
+  }
+
+  /**
+   * 创建表情面板容器
+   * @returns {HTMLDivElement}
+   */
+  private createEmojiContainer(): HTMLDivElement {
+    const { wrapAnimationClassName, wrapClassName } = this.options
+    const container: HTMLDivElement = document.createElement('div')
+    container.classList.add(this.wrapClassName)
+    container.classList.add(this.wrapCountClassName)
+    container.classList.add(wrapAnimationClassName)
+    if (wrapClassName !== '') {
+      container.classList.add(wrapClassName)
+    }
     return container
   }
 
   /**
    * 创建表情列表面板
-   * @param {Array} emojiList
-   * @returns {JQuery Object}
+   * @param {IEmojiItem} emojiList
+   * @returns {HTMLDivElement}
    */
-  private createEmojiList(emojiList) {
-    const emojiWrap: HTMLElement = document.createElement('div')
+  private createEmojiList(emojiList: Array<IEmojiItem>) {
+    const emojiWrap: HTMLDivElement = document.createElement('div')
     emojiWrap.classList.add('emoji-list')
 
     emojiList.forEach(item => {
@@ -72,12 +92,12 @@ class EmojiPopover {
 
   /**
    * 创建表情项
-   * @param {Object} itemData
-   * @returns
+   * @param {IEmojiItem} itemData
+   * @returns {HTMLDivElement}
    */
-  private createEmojiItem(itemData): HTMLElement {
-    const { value, label } = itemData
-    const emojiContainer: HTMLElement = document.createElement('div')
+  private createEmojiItem(emojiItemData): HTMLDivElement {
+    const { value, label } = emojiItemData
+    const emojiContainer: HTMLDivElement = document.createElement('div')
     let emoji: HTMLImageElement | HTMLSpanElement
 
     if (isUrl(value)) {
@@ -104,20 +124,23 @@ class EmojiPopover {
 
   /**
    * 创建表情面板蒙层
-   * @returns @returns {JQuery Object}
+   * @returns {HTMLDivElement}
    */
-  private createMask() {
-    const mask = document.createElement('div')
+  private createMask(): HTMLDivElement {
+    const mask: HTMLDivElement = document.createElement('div')
     mask.classList.add('emoji-mask')
+    mask.addEventListener('click', () => this.toggle(false))
     return mask
   }
 
   /**
-   * 打开或关闭表情面板
-   * @param isShow {Boolean}
+   *  打开或关闭表情面板
+   * @param isShow {boolean}
    */
-  public toggle(isShow) {
-    const emojiWrap: HTMLElement = document.querySelector('.emoji-wrap')
+  public toggle(isShow: boolean) {
+    const emojiWrap: HTMLElement = document.querySelector(
+      `.${this.wrapCountClassName}`
+    )
     emojiWrap.style.display = isShow ? 'block' : 'none'
   }
 
@@ -125,8 +148,11 @@ class EmojiPopover {
    * 选择表情
    */
   public onSelect(callback) {
-    const emojiItems = document.querySelectorAll('.emoji-item')
+    const emojiItems = document.querySelectorAll(
+      `.${this.wrapCountClassName} .emoji-item`
+    )
     const _this = this
+
     emojiItems.forEach(function (item) {
       item.addEventListener('click', function (e: Event) {
         const currentTarget = e.currentTarget as HTMLElement

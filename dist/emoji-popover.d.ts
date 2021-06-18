@@ -11,9 +11,15 @@ export interface IOptions {
 }
 
 export declare class EmojiButton {
-  private options
+  private options: IOptions
+  private wrapClassName: string
+  private wrapCount: number
+  private wrapCountClassName: string
+
   constructor(options: IOptions)
-  private _init(): void
+
+  private init(): void
+  private createButtonListener(): void
   private createEmojiContainer()
   private createEmojiList()
   private createEmojiItem()

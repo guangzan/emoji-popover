@@ -4,29 +4,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DEMO · emoji-popover</title>
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-      }
-
-      .container {
-        position: absolute;
-        top: 300px;
-        left: 50px;
-        width: 300px;
-      }
-    </style>
   </head>
   <body>
     <div class="container">
-      <input class="e-input" type="text" />
-      <button class="e-btn">选择表情</button>
+      <div class="wrap">
+        <input class="e-input" type="text" />
+        <button class="e-btn">系统表情</button>
+      </div>
+      <div class="wrap">
+        <input class="e-input-2" type="text" />
+        <button class="e-btn-2">文本表情</button>
+      </div>
+      <div class="wrap">
+        <input class="e-input-3" type="text" />
+        <button class="e-btn-3">网络图片</button>
+      </div>
     </div>
 
     <script type="module">
       import EmojiPopover from 'emoji-popover'
       import '../node_modules/emoji-popover/dist/style.css'
+      import './index.css'
 
       const e1 = new EmojiPopover({
         button: '.e-btn',
@@ -36,14 +34,190 @@
           {
             value: '🤣',
             label: '笑哭'
+          },
+          {
+            value: '🤣',
+            label: '笑哭'
+          },
+          {
+            value: '😃',
+            label: '大笑'
+          },
+          {
+            value: '😅',
+            label: '苦笑'
+          },
+          {
+            value: '😆',
+            label: '斜眼笑'
+          },
+          {
+            value: '😏',
+            label: '得意'
+          },
+          {
+            value: '😊',
+            label: '微笑'
+          },
+          {
+            value: '😎',
+            label: '酷！'
+          },
+          {
+            value: '😍',
+            label: '花痴'
+          },
+          {
+            value: '🙂',
+            label: '呵呵'
+          },
+          {
+            value: '🤩',
+            label: '好崇拜哦'
+          },
+          {
+            value: '🤔',
+            label: '思考'
+          },
+          {
+            value: '🙄',
+            label: '白眼'
+          },
+          {
+            value: '😜',
+            label: '略略略'
+          },
+          {
+            value: '😲',
+            label: '呆住'
+          },
+          {
+            value: '😭',
+            label: '大哭'
+          },
+          {
+            value: '🤯',
+            label: '头炸了'
+          },
+          {
+            value: '😰',
+            label: '冷汗'
+          },
+          {
+            value: '😱',
+            label: '吓死了'
+          },
+          {
+            value: '🤪',
+            label: '略略略'
+          },
+          {
+            value: '😵',
+            label: '晕'
+          },
+          {
+            value: '😡',
+            label: '愤怒'
+          },
+          {
+            value: '🥳',
+            label: '祝贺'
+          },
+          {
+            value: '🤡',
+            label: '小丑竟是我'
+          },
+          {
+            value: '🤫',
+            label: '嘘~'
+          },
+          {
+            value: '🐒',
+            label: '猴'
+          },
+          {
+            value: '🤭',
+            label: '笑笑不说话'
+          },
+          {
+            value: '🐂',
+            label: '牛'
+          },
+          {
+            value: '🍺',
+            label: '啤酒'
           }
         ]
       })
 
-      let input = document.querySelector('.e-input')
-
       e1.onSelect(value => {
-        input.value += value
+        document.querySelector('.e-input').value += value
+      })
+
+      const e2 = new EmojiPopover({
+        button: '.e-btn-2',
+        container: 'body',
+        targetElement: '.e-input-2',
+        emojiList: [
+          {
+            value: '(=・ω・=)',
+            label: ''
+          },
+          {
+            value: '(｀・ω・´)',
+            label: ''
+          },
+          {
+            value: '(°∀°)ﾉ',
+            label: ''
+          },
+          {
+            value: '←_←',
+            label: ''
+          },
+          {
+            value: '→_→',
+            label: ''
+          },
+          {
+            value: 'Σ(ﾟдﾟ;)',
+            label: ''
+          },
+          {
+            value: '(｡･ω･｡)',
+            label: ''
+          },
+          {
+            value: '(-_-#)',
+            label: ''
+          }
+        ]
+      })
+
+      e2.onSelect(value => {
+        document.querySelector('.e-input-2').value += value
+      })
+
+      const e3 = new EmojiPopover({
+        button: '.e-btn-3',
+        container: 'body',
+        targetElement: '.e-input-3',
+        emojiList: [
+          {
+            value:
+              'https://img1.baidu.com/it/u=3060109128,4247188337&fm=26&fmt=auto&gp=0.jpg',
+            label: ''
+          },
+          {
+            value:
+              'https://img2.baidu.com/it/u=358795348,3036825421&fm=26&fmt=auto&gp=0.jpg',
+            label: ''
+          }
+        ]
+      })
+
+      e3.onSelect(value => {
+        document.querySelector('.e-input-3').value += value
       })
     </script>
   </body>

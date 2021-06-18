@@ -1,7 +1,7 @@
 {
   "name": "emoji-popover",
   "description": "Vanilla JavaScript emoji popover.",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "license": "MIT",
   "author": "guangzan <guangzan1999@outlook.com> (https://www.cnblogs.com/guangzan)",
   "homepage": "https://guangzan.github.io/emoji-popover/",
@@ -9,8 +9,8 @@
   "scripts": {
     "dev": "vite --config config/vite.config.ts",
     "build": "vite build --config config/vite.config.ts",
-    "dev:docs": "vite --config config/vite.config.docs.ts",
-    "build:docs": "vite build --config config/vite.config.docs.ts"
+    "dev:exm": "vite --config config/vite.config.exm.ts",
+    "build:exm": "vite build --config config/vite.config.exm.ts"
   },
   "files": [
     "dist"
@@ -40,6 +40,6 @@
     "vite": "^2.3.4"
   },
   "dependencies": {
-    "emoji-popover": "^1.0.6"
+    "emoji-popover": "^1.0.7"
   }
 }
