@@ -1,7 +1,7 @@
 {
   "name": "emoji-popover",
   "description": "Vanilla JavaScript emoji popover.",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "license": "MIT",
   "author": "guangzan <guangzan1999@outlook.com> (https://www.cnblogs.com/guangzan)",
   "homepage": "https://guangzan.github.io/emoji-popover/",
@@ -40,6 +40,6 @@
     "vite": "^2.3.4"
   },
   "dependencies": {
-    "emoji-popover": "^1.0.7"
+    "emoji-popover": "^1.0.8"
   }
 }
