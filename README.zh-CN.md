@@ -15,7 +15,7 @@ Emoji Popover 是原生 JavaScript 构建的表情选择弹窗.
 
 ## 浏览器支持
 
-所有支持最新 JavaScript 功能的现代浏览器都支持 emojipopover。Internet Explorer 11 +。
+所有支持最新 JavaScript 功能的现代浏览器都支持 Emoji Popover。Internet Explorer 11 +。
 
 ## 安装 & 使用
 
