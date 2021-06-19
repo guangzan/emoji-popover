@@ -2,7 +2,7 @@
 
 **English** | [中文](./README.zh-CN.md)
 
-Vanilla JavaScript Emoji Popover.
+Vanilla JavaScript Emoji Popover. [DEMO](https://guangzan.github.io/emoji-popover/)
 
 ## Features
 

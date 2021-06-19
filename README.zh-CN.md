@@ -2,7 +2,7 @@
 
 **[English](./README.md)** | 中文
 
-Emoji Popover 是原生 JavaScript 构建的表情选择弹窗.
+Emoji Popover 是原生 JavaScript 构建的表情选择弹窗. [示例](https://guangzan.github.io/emoji-popover/)
 
 ## 特性
 
