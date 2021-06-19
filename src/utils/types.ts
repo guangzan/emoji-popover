@@ -9,5 +9,5 @@ export interface IOptions {
   targetElement: string
   emojiList: Array<IEmojiItem>
   wrapClassName?: string
-  wrapAnimationClassName: string
+  wrapAnimationClassName?: string
 }

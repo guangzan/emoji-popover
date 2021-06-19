@@ -1,6 +1,13 @@
-:root {
-  --e-width-emoji-img: 60px;
-  --e-height-emoji-img: 60px;
+.emoji-wrap-3 {
+  --e-color-border: blue; /* EmojiPopover border color */
+  --e-color-emoji-text: #666; /* text emoji font color */
+  --e-color-border-emoji-hover: #e1e1e1; /* emoji hover border color */
+  --e-color-bg: #fff; /* EmojiPopover background color */
+  --e-bg-emoji-hover: #f8f8f8; /* emoji hover background color */
+  --e-size-emoji-text: 16px; /* text emoji font size */
+  --e-width-emoji-img: 60px; /* image emoji width */
+  --e-height-emoji-img: 60px; /* image emoji height */
+  --e-max-width: 288px; /* EmojiPopover max width */
 }
 
 * {

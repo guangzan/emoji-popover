@@ -6,7 +6,7 @@ Vanilla JavaScript Emoji Popover.
 
 ## Features
 
-- 📦 brotli: 0.61kb
+- 📦 brotli: 0.7kb
 - 💻 Vanilla JS, no dependency, use with any framework
 - 🙅‍ No Emoji is integrated
 - ⚙️ Add your own custom emojis, native, image or any text
@@ -123,6 +123,20 @@ e1.onSelect(value => {
 - Necessary: Yes
 - Description: Emoji list. native, image link or any text.
 
+### wrapClassName
+
+- Type: string
+- Default: ''
+- Necessary: No
+- Description: Emoji Popover custom class.
+
+### wrapAnimationClassName
+
+- Type: string
+- Default: 'anim-scale-in'
+- Necessary: No
+- Description: Emoji Popover toggle animation.
+
 ## Methods
 
 ### onSelect
@@ -139,6 +153,22 @@ You can override these CSS variables to customize the style.
 
 ```CSS
 :root {
+  --e-color-border: #e1e1e1; /* EmojiPopover border color */
+  --e-color-emoji-text: #666; /* text emoji font color */
+  --e-color-border-emoji-hover: #e1e1e1; /* emoji hover border color */
+  --e-color-bg: #fff; /* EmojiPopover background color */
+  --e-bg-emoji-hover: #f8f8f8; /* emoji hover background color */
+  --e-size-emoji-text: 16px; /* text emoji font size */
+  --e-width-emoji-img: 20px;  /* image emoji width */
+  --e-height-emoji-img: 20px; /* image emoji height */
+  --e-max-width: 288px; /* EmojiPopover max width */
+}
+```
+
+If there are multiple instances, you can apply them to the specified instance through the CSS variable scope.
+
+```CSS
+.<custom-class-name> {
   --e-color-border: #e1e1e1; /* EmojiPopover border color */
   --e-color-emoji-text: #666; /* text emoji font color */
   --e-color-border-emoji-hover: #e1e1e1; /* emoji hover border color */
